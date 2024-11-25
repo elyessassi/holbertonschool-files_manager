@@ -10,13 +10,9 @@ class RedisClient{
 
 
     isAlive() {
-        try {
-            this.Rclient.isOpen
-            return(true)
-        }
-        catch(err){
-            return(false)
-        }
+
+        return this.Rclient.isOpen
+
     }
     
 
