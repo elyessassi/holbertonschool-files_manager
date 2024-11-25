@@ -4,6 +4,7 @@ import {createClient} from "redis"
 class RedisClient{
     constructor(){
         this.Rclient = createClient()
+        console.log(this.Rclient)
         this.Rclient.connect()
         this.Rclient.on("error", (error) => {console.log(error)})
     }
