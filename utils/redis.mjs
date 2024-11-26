@@ -10,7 +10,8 @@ class RedisClient{
 
     isAlive() {
 
-        return this.Rclient.isOpen
+        this.Rclient.on('connect' ,() => {return(true)})
+        this.Rclient.on("error", () => {return(false)})
 
     }
     
